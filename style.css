@@ -323,3 +323,23 @@ footer {
   text-decoration: underline;
 }
 
+#back-to-top {
+  position: fixed;      /* stays in the same spot */
+  bottom: 30px;         /* distance from bottom */
+  right: 30px;          /* distance from right */
+  background-color: #14213d; /* dark background */
+  color: #fff;          /* white arrow */
+  font-size: 24px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.3s;
+  z-index: 1000;
+}
+
+#back-to-top:hover {
+  background-color: #8b1d18;  /* deep red on hover */
+  transform: translateY(-3px); /* slight lift effect */
+}

@@ -243,3 +243,27 @@ footer {
     padding: 35px 15px;
   }
 }
+
+.registration-card {
+  background: #f4c430; /* bright yellow highlight */
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.registration-card a {
+  color: #8b1d18; /* deep red links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.registration-card a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+

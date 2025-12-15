@@ -277,15 +277,30 @@ footer {
 }
 
 .location {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
   margin-top: 20px;
-  font-size: 1.05rem;
+}
+
+.location-title {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #8b1d18; /* deep red */
+  background-color: #f4c430; /* yellow highlight */
+  padding: 6px 15px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 8px;
 }
 
 .room-number {
-  background-color: #f4c430; /* yellow */
-  color: #8b1d18; /* deep red */
+  background-color: #8b1d18;
+  color: #fff;
   padding: 2px 6px;
   border-radius: 4px;
   font-weight: bold;
 }
+
 

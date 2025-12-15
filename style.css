@@ -299,4 +299,27 @@ footer {
   font-weight: bold;
 }
 
+#contact {
+  text-align: center;
+}
+
+#contact h2 {
+  color: #14213d;
+  margin-bottom: 15px;
+}
+
+#contact p {
+  font-size: 1rem;
+  color: #333;
+}
+
+#contact a {
+  color: #1f2a48;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
 

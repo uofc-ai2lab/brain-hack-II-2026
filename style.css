@@ -453,6 +453,18 @@ footer {
   }
 }
 
+.scholar-link {
+  color: #1a4fd8;       /* blue for links */
+  text-decoration: none; 
+  font-weight: 500;
+}
+
+.scholar-link:hover {
+  text-decoration: underline;
+  color: #0b2a80;       /* darker blue on hover */
+}
+
+
 
 
 

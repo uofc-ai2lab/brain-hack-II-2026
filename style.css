@@ -446,29 +446,32 @@ footer {
 
 
 
-/* ---------------------------- */
-/* Left-side Floating Navigation */
-/* ---------------------------- */
+/* Wrapper ensures nav appears only after header */
+.floating-nav-wrapper {
+  position: relative;      /* reference for sticky positioning */
+  height: 0;               /* no extra space */
+}
+
+/* Left-side floating navigation */
 .floating-nav-left {
-  position: fixed;         /* floats while scrolling */
-  top: 350px;              /* push nav down so it appears after scrolling past header */
-  left: 15px;              /* distance from left edge */
+  position: sticky;        /* sticks within wrapper when scrolling */
+  top: 20px;               /* distance from viewport top when sticky */
   display: flex;
   flex-direction: column;
   gap: 12px;
   background: #8b1d18;     /* red block */
-  padding: 10px 16px;      /* spacing around text */
+  padding: 10px 16px;
   border-radius: 8px;
+  width: max-content;
+  min-width: 130px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   z-index: 1000;
-  width: max-content;      /* auto width based on text */
-  min-width: 130px;        /* ensures block is not too narrow */
-  box-sizing: border-box;  /* include padding in width */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* subtle shadow */
 }
 
 /* Links inside nav */
 .floating-nav-left a {
-  color: #fff;             /* white text */
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
@@ -480,18 +483,18 @@ footer {
 
 /* Hover effect */
 .floating-nav-left a:hover {
-  background: #f4c430;     /* gold highlight */
-  color: #8b1d18;          /* text color on hover */
-  transform: translateX(2px); /* slight movement for effect */
+  background: #f4c430;
+  color: #8b1d18;
+  transform: translateX(2px);
 }
 
-/* Optional: active section styling */
+/* Active link */
 .floating-nav-left a.active {
   background: #f4c430;
   color: #8b1d18;
 }
 
-/* Optional: add dot before each link for extra style */
+/* Dot before each link (optional) */
 .floating-nav-left a::before {
   content: '•';
   color: #f4c430;
@@ -499,14 +502,14 @@ footer {
   font-weight: bold;
 }
 
-/* Hide nav on smaller screens */
+/* Hide on mobile */
 @media (max-width: 900px) {
   .floating-nav-left {
     display: none;
   }
 }
 
-/* Smooth scrolling for anchor links */
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }

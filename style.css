@@ -447,72 +447,45 @@ footer {
 
 
 /* ---------------------------- */
-/* Sticky Floating Navigation   */
-/* (CSS-only, Left Side)        */
-/* ---------------------------- */
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* Wrapper appears only after header */
-.sticky-nav-wrapper {
-  position: relative;
-}
-
-/* Sticky navigation */
+/* Left-side floating navigation */
 .floating-nav-left {
-  position: sticky;
-  top: 40%;
-  margin-left: 15px;
-
+  position: fixed;        /* floats while scrolling */
+  top: 120px;             /* distance from top, adjust for header */
+  left: 15px;             /* distance from left edge */
   display: flex;
   flex-direction: column;
-  gap: 14px;
-
-  width: fit-content;
-  z-index: 100;
+  gap: 12px;
+  background: #8b1d18;    /* red block */
+  padding: 10px 14px;
+  border-radius: 8px;
+  z-index: 1000;
 }
 
-/* Navigation dots */
+/* Links inside nav */
 .floating-nav-left a {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #8b1d18;
+  color: #fff;           /* text color */
   text-decoration: none;
-  position: relative;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.floating-nav-left a:hover {
-  background: #f4c430;
-  transform: scale(1.35);
-}
-
-/* Tooltip labels */
-.floating-nav-left a::after {
-  content: attr(title);
-  position: absolute;
-  left: 22px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #8b1d18;
-  color: #fff;
-  padding: 4px 8px;
-  font-size: 0.75rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 6px 10px;
   border-radius: 4px;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease;
+  transition: background 0.2s ease;
+  display: block;
 }
 
-.floating-nav-left a:hover::after {
-  opacity: 1;
+/* Hover effect */
+.floating-nav-left a:hover {
+  background: #f4c430;   /* gold accent */
+  color: #8b1d18;        /* text color change */
 }
 
-/* Hide on mobile */
+/* Optional active look (if you want to mark first section) */
+.floating-nav-left a.active {
+  background: #f4c430;
+  color: #8b1d18;
+}
+
+/* Hide on small screens */
 @media (max-width: 900px) {
   .floating-nav-left {
     display: none;

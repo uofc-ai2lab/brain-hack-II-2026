@@ -464,7 +464,7 @@ footer {
 .floating-nav-left {
   position: fixed;               /* floats while scrolling */
   top: 50%;                      /* vertical center of viewport */
-  left: 50px;                     /* distance from left edge */
+  left: 100px;                     /* distance from left edge */
   transform: translateY(-50%);    /* true vertical center */
   display: none;                  /* hidden initially, JS will show */
   flex-direction: column;
@@ -488,7 +488,7 @@ footer {
 
 /* Hover effect */
 .floating-nav-left a:hover {
-  color: #f4c430;                /* gold highlight on hover */
+  color: ##000000;                /* black highlight on hover */
   transform: translateX(3px);    /* subtle movement */
 }
 

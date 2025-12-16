@@ -452,3 +452,36 @@ footer {
     font-size: 0.75rem; /* smaller for mobile */
   }
 }
+
+
+
+
+
+
+/* Floating Navigation Bar */
+.floating-nav-left {
+  position: fixed;
+  top: 100px; /* adjust to avoid header */
+  left: 15px;
+  display: none; /* hidden by default */
+  flex-direction: column;
+  gap: 12px;
+  background: #8b1d18;
+  padding: 10px 16px;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.floating-nav-left a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 10px;
+  display: block;
+}
+
+.floating-nav-left a:hover {
+  background: #f4c430;
+  color: #8b1d18;
+}
+

@@ -32,6 +32,18 @@
   </nav>
 
 
+  <!-- Floating nav -->
+  <nav id="floatingNav" class="floating-nav-left">
+    <a href="#about">About</a>
+    <a href="#registration">Registration</a>
+    <a href="#speakers">Speakers</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#challenge">AI Challenge</a>
+    <a href="#organizers">Organizers</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+
   <!-- About section -->
   <section class="section" id="about">
     <h2>About the Workshop</h2>
@@ -314,5 +326,20 @@
   <footer>
     <p>© São Paulo – Alberta Brain Hack II: Multimodal Medical Image Analysis 2026</p>
   </footer>
+
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const floatingNav = document.getElementById('floatingNav');
+      const trigger = document.getElementById('registration'); // show after this section
+      const triggerTop = trigger.getBoundingClientRect().top + window.scrollY;
+  
+      if (window.scrollY >= triggerTop - 50) {
+        floatingNav.style.display = 'flex';
+      } else {
+        floatingNav.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>

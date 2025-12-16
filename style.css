@@ -451,7 +451,7 @@ footer {
 /* ---------------------------- */
 .floating-nav-left {
   position: fixed;         /* floats while scrolling */
-  top: 120px;              /* adjust depending on header height */
+  top: 350px;              /* push nav down so it appears after scrolling past header */
   left: 15px;              /* distance from left edge */
   display: flex;
   flex-direction: column;
@@ -461,7 +461,7 @@ footer {
   border-radius: 8px;
   z-index: 1000;
   width: max-content;      /* auto width based on text */
-  min-width: 130px;        /* optional: minimum width */
+  min-width: 130px;        /* ensures block is not too narrow */
   box-sizing: border-box;  /* include padding in width */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* subtle shadow */
 }

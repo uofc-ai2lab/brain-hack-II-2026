@@ -488,7 +488,7 @@ footer {
 
 /* Hover effect */
 .floating-nav-left a:hover {
-  color: ##000000;                /* black highlight on hover */
+  color: #000000;                /* black highlight on hover */
   transform: translateX(2px);    /* subtle movement */
 }
 

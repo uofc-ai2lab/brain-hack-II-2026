@@ -459,54 +459,48 @@ footer {
 
 
 /* ---------------------------- */
-/* Left-side Floating Navigation */
+/* Left-side Floating Navigation - Minimal Style */
 /* ---------------------------- */
 .floating-nav-left {
   position: fixed;               /* floats while scrolling */
   top: 50%;                      /* vertical center of viewport */
   left: 15px;                     /* distance from left edge */
-  transform: translateY(-50%);    /* pull up by half its height */
-  display: none;                  /* hidden initially */
+  transform: translateY(-50%);    /* true vertical center */
+  display: none;                  /* hidden initially, JS will show */
   flex-direction: column;
-  gap: 12px;
-  background: #8b1d18;           /* red background */
-  padding: 12px 18px;            /* spacing around text */
-  border-radius: 10px;
+  gap: 14px;
+  background: transparent;        /* no solid block */
+  padding: 0;                     /* no padding */
   z-index: 1000;
-  min-width: 170px;               /* ensures text fits */
-  box-sizing: border-box;         /* include padding in width */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* subtle shadow */
 }
 
 /* Links inside nav */
 .floating-nav-left a {
-  color: #fff;                    /* white text */
+  color: #8b1d18;                /* deep red text */
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;                /* slightly bigger font */
-  padding: 8px 12px;              /* better spacing for readability */
-  border-radius: 5px;
+  font-size: 1rem;               /* readable size */
+  padding: 4px 8px;              /* small padding for hover area */
+  border-radius: 4px;
   display: block;
-  transition: background 0.2s, color 0.2s, transform 0.2s;
+  transition: color 0.2s, transform 0.2s;
 }
 
 /* Hover effect */
 .floating-nav-left a:hover {
-  background: #f4c430;            /* gold highlight */
-  color: #8b1d18;                 /* red text on hover */
-  transform: translateX(3px);     /* subtle movement */
+  color: #f4c430;                /* gold highlight on hover */
+  transform: translateX(3px);    /* subtle movement */
 }
 
 /* Optional: active section styling */
 .floating-nav-left a.active {
-  background: #f4c430;
-  color: #8b1d18;
+  color: #b22222;                /* slightly darker red for active */
 }
 
-/* Optional: add dot before each link for extra style */
+/* Optional: dot before link */
 .floating-nav-left a::before {
   content: '•';
-  color: #f4c430;
+  color: #b22222;                /* deep red dot */
   margin-right: 6px;
   font-weight: bold;
 }

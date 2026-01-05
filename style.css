@@ -154,98 +154,11 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ---------------------------- */
-/* Organizers Section Styling   */
-/* ---------------------------- */
-.organizer-container {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(240px, 1fr));
-  gap: 25px;
-  justify-content: center;
-  margin-top: 20px;
-}
 
-.organizer-card {
-  background: #fdf6e3;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  width: 240px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
 
-.organizer-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
 
-.organizer-photo {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 12px;
-}
 
-.organizer-card h3 {
-  margin: 10px 0 5px;
-  font-size: 1.2rem;
-  color: #8b1d18;
-}
 
-.organizer-card p {
-  margin: 3px 0;
-  font-size: 0.95rem;
-  color: #333;
-}
-
-.organizer-card a {
-  color: #b22222;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.organizer-card a:hover {
-  text-decoration: underline;
-}
-
-/* ---------------------------- */
-/* Responsive Adjustments       */
-/* ---------------------------- */
-@media (max-width: 900px) {
-  .organizer-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .organizer-card {
-    width: 80%;
-  }
-}
-
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 2rem;
-  }
-
-  header h2 {
-    font-size: 1.6rem;
-  }
-
-  header p {
-    font-size: 1rem;
-  }
-
-  nav a {
-    display: block;
-    margin: 8px 0;
-  }
-
-  .section {
-    padding: 35px 15px;
-  }
-}
 
 .registration-card {
   background: #f4c430; /* bright yellow highlight */
@@ -347,6 +260,8 @@ footer {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
+
+
 
 
 
@@ -474,6 +389,94 @@ footer {
     font-size: 0.75rem;
   }
 }
+
+
+
+
+
+
+
+
+
+/* ============================ */
+/* Organizers Section           */
+/* ============================ */
+.organizer-container {
+  display: grid;
+  grid-template-columns: repeat(2, 240px);
+  gap: 25px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Organizer card */
+.organizer-card {
+  background: #fdf6e3;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.organizer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Organizer photo — circular headshot */
+.organizer-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;     /* LinkedIn-style crop */
+  border-radius: 50%;    /* perfect circle */
+  margin: 0 auto 12px;   /* center horizontally */
+  display: block;
+}
+
+/* Organizer name */
+.organizer-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: #8b1d18;
+}
+
+/* Organizer text */
+.organizer-card p {
+  margin: 3px 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Organizer links (if any) */
+.organizer-card a {
+  color: #b22222;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.organizer-card a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments       */
+@media (max-width: 900px) {
+  .organizer-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .organizer-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .section {
+    padding: 35px 15px;
+  }
+}
+
 
 
 

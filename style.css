@@ -350,6 +350,11 @@ footer {
 
 
 
+
+
+
+
+
 /* ---------------------------- */
 /* Speaker Section */
 /* ---------------------------- */
@@ -398,13 +403,12 @@ footer {
    Circular Speaker Image
    ========================= */
 
-/* Image wrapper */
 .speaker-img-wrapper {
   width: 120px;
   height: 120px;
   margin: 16px auto 8px;
   border-radius: 50%;
-  overflow: hidden;
+  overflow: hidden;          /* 🔑 this creates the circle */
   background: #ffffff;
   border: 2px solid #e3e8f2;
   display: flex;
@@ -412,11 +416,11 @@ footer {
   justify-content: center;
 }
 
-/* Image */
 .speaker-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;         /* 🔑 crops passport photo correctly */
+  object-position: center;   /* keeps face centered */
 }
 
 /* Optional hover polish */

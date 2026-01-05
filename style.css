@@ -350,15 +350,13 @@ footer {
 
 
 
-
-
-
-
-
+/* ---------------------------- */
+/* Speaker Section */
+/* ---------------------------- */
 /* Section background */
 .speakers-section {
-  background-color: #ffffff; /* pure white */
-  padding: 50px 20px; /* optional spacing around section */
+  background-color: #ffffff;
+  padding: 50px 20px;
 }
 
 /* Speaker list - grid layout */
@@ -366,21 +364,21 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive columns */
-  gap: 20px; /* spacing between cards */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   padding-top: 20px;
 }
 
 /* Rectangular speaker card */
 .speaker-rect {
   display: flex;
-  flex-direction: column; /* stack content vertically */
-  background: #f6f8fc; /* soft tinted card */
+  flex-direction: column;
+  background: #f6f8fc;
   border-radius: 12px;
   border: 1px solid #e3e8f2;
   overflow: hidden;
   transition: background 0.2s ease, transform 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* subtle shadow */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .speaker-rect:hover {
@@ -391,78 +389,113 @@ footer {
 
 /* Accent bar */
 .speaker-accent {
-  width: 100%; /* full width on top */
+  width: 100%;
   height: 5px;
-  background: ##8b1d18;
+  background: #8b1d18;
 }
 
-/* Speaker image */
+/* =========================
+   Circular Speaker Image
+   ========================= */
+
+/* Image wrapper */
+.speaker-img-wrapper {
+  width: 120px;
+  height: 120px;
+  margin: 16px auto 8px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ffffff;
+  border: 2px solid #e3e8f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image */
 .speaker-img {
   width: 100%;
-  height: 140px; /* reduced height for smaller panels */
+  height: 100%;
   object-fit: cover;
+}
+
+/* Optional hover polish */
+.speaker-rect:hover .speaker-img-wrapper {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
 }
 
 /* Content */
 .speaker-content {
-  padding: 0.8rem 1.2rem; /* reduced padding */
+  padding: 0.8rem 1.2rem;
   flex: 1;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 /* Speaker name */
 .speaker-content h3 {
   margin: 0 0 3px;
-  font-size: 1.15rem; /* slightly smaller */
-  color: ##8b1d18;
+  font-size: 1.15rem;
+  color: #8b1d18;
 }
 
 /* Role/affiliation */
 .speaker-role {
   margin: 0 0 4px;
   color: #555;
-  font-size: 0.85rem; /* slightly smaller */
+  font-size: 0.85rem;
 }
 
 /* Topic */
 .speaker-topic {
   font-weight: 600;
   margin-bottom: 3px;
-  font-size: 0.9rem; /* slightly smaller */
+  font-size: 0.9rem;
 }
 
 /* Summary */
 .speaker-summary {
   color: #444;
-  font-size: 0.8rem; /* smaller summary text */
+  font-size: 0.8rem;
   line-height: 1.35;
-  margin-top: auto; /* ensures summary stays at bottom for consistent card height */
+  margin-top: auto;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .speaker-img {
-    height: 120px; /* smaller for tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  .speaker-summary {
-    font-size: 0.75rem; /* smaller for mobile */
-  }
-}
-
+/* Links */
 .scholar-link {
-  color: #1a4fd8;       /* blue for links */
-  text-decoration: none; 
+  color: #1a4fd8;
+  text-decoration: none;
   font-weight: 500;
 }
 
 .scholar-link:hover {
   text-decoration: underline;
-  color: #0b2a80;       /* darker blue on hover */
+  color: #0b2a80;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .speaker-img-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .speaker-img-wrapper {
+    width: 90px;
+    height: 90px;
+  }
+
+  .speaker-summary {
+    font-size: 0.75rem;
+  }
+}
+
+
+
 
 
 

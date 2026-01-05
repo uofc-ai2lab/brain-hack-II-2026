@@ -401,12 +401,13 @@ footer {
 /* ============================ */
 /* Organizers Section           */
 /* ============================ */
+
 .organizer-container {
   display: grid;
-  grid-template-columns: repeat(2, 240px);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 25px;
-  justify-content: center;
-  margin-top: 20px;
+  max-width: 1200px;
+  margin: 20px auto 0;
 }
 
 /* Organizer card */
@@ -426,25 +427,25 @@ footer {
 
 /* Organizer photo — circular headshot */
 .organizer-photo {
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   object-fit: cover;     /* LinkedIn-style crop */
-  border-radius: 50%;    /* perfect circle */
-  margin: 0 auto 12px;   /* center horizontally */
+  border-radius: 50%;
+  margin: 0 auto 12px;
   display: block;
 }
 
 /* Organizer name */
 .organizer-card h3 {
   margin: 10px 0 5px;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: #8b1d18;
 }
 
 /* Organizer text */
 .organizer-card p {
   margin: 3px 0;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #333;
 }
 
@@ -459,23 +460,26 @@ footer {
   text-decoration: underline;
 }
 
-/* Responsive Adjustments       */
-@media (max-width: 900px) {
-  .organizer-container {
-    grid-template-columns: 1fr;
-  }
-}
 
-@media (max-width: 600px) {
+/* Responsive Refinements       */
+@media (max-width: 768px) {
   .organizer-photo {
     width: 140px;
     height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .organizer-photo {
+    width: 120px;
+    height: 120px;
   }
 
   .section {
     padding: 35px 15px;
   }
 }
+
 
 
 

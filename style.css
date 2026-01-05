@@ -417,10 +417,12 @@ footer {
 }
 
 .speaker-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;         /* 🔑 crops passport photo correctly */
-  object-position: center;   /* keeps face centered */
+  width: 160px;
+  height: 160px;
+  object-fit: cover;     /* LinkedIn-style crop */
+  border-radius: 50%;    /* 🔑 circular */
+  margin: 16px auto 8px; /* center horizontally */
+  display: block;
 }
 
 /* Optional hover polish */

@@ -398,8 +398,8 @@ footer {
 }
 
 .speaker-img {
-  width: 300px;
-  height: 300px;
+  width: 220px;
+  height: 220px;
   object-fit: cover;      /* LinkedIn-style headshot crop */
   border-radius: 50%;     /* circular frame */
   margin: 16px auto 8px;  /* centered inside card */
